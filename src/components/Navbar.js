@@ -5,8 +5,10 @@ import "../css/Navbar.css";
 function Navbar() {
     return (
       <nav>
-        <p>Navbar</p>
         <Link to="/">Home</Link>
+        <Link to="/">Agents</Link>
+        <Link to="/">Maps</Link>
+        <Link to="/">Weapons</Link>
       </nav>
     );
 }
