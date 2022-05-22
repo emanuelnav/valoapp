@@ -1,26 +1,10 @@
-import React, { useEffect } from "react";
-import { AgentCard } from "./AgentCard";
+import React from 'react';
 
 function Home() {
-    const [agentsData, setAgentsData] = React.useState(null);
-
-    useEffect(() => {
-        fetchAgentsData();
-
-        async function fetchAgentsData() {
-            const result = await fetch(`https://valorant-api.com/v1/agents`);
-            const data = await result.json();
-            setAgentsData(data);
-        }
-    }, []);
-
-    if (!agentsData) return <div></div>
 
     return (
         <React.Fragment>
-            { agentsData.data.map( agent =>
-                <AgentCard agent={agent} key={agent.uuid}/>
-            )}
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum est diam, ut lobortis purus viverra eget. Proin luctus ut ligula et sodales. Curabitur consequat dui urna, non porttitor mauris efficitur at. Pellentesque eget auctor orci. Quisque eu tincidunt est. Duis ornare, quam vestibulum dictum facilisis, felis felis efficitur urna, ut hendrerit enim dui non erat. Aliquam id tellus sit amet erat pellentesque pellentesque. Phasellus tincidunt dictum orci et bibendum.</p>
         </React.Fragment>
     );
 }

@@ -11,7 +11,7 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route element={<Home/>} path="/" exact/>
-        <Route element={<AgentPage/>} path="/agent/:agentId"/>
+        <Route element={<AgentPage/>} path="/agents"/>
         <Route element={<p>Error Not Found</p>} path="*"></Route>
       </Routes>
     </BrowserRouter>
